@@ -85,6 +85,13 @@ footer {
     grid-template-columns: 75px 150px auto;
 }
 
+.container_st {
+    display: grid;
+    column-gap: 5px;
+    row-gap: 10px;
+    grid-template-columns: 200px 20px 200px;
+}
+
 .container>div {
     padding: 5px;
     text-align: center;
