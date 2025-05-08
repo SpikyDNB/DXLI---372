@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(Pictures/woodbg.jpg);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-image: url(Pictures/plank.webp);
+    padding: 10px 20px;
+    border-bottom: 2px solid #000;
+}
+
+.home-icon {
+    margin-right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.pages {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.page {
+    width: 48%;
+    height: 530px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-image: url(Pictures/Parchment.jpg);
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+footer {
+    background-image: url(Pictures/plank.webp);
+    color: #ffff;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #000;
+}
+
+.container {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 100px 200px 120px;
+    padding: 5px;
+    align-content: space-evenly;
+}
+
+.container_skills {
+    display: grid;
+    column-gap: 5px;
+    row-gap: 10px;
+    grid-template-columns: 75px 150px auto;
+}
+
+.container>div {
+    padding: 5px;
+    text-align: center;
+}
+
+.long_shot {
+    width: 202px;
+    height: 650px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1150px;
+    margin-right: 1000000px;
+    position: absolute;
+}
+
+.long_shot>img {
+    width: 275px;
+    height: 500px;
+
+}
