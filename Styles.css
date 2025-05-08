@@ -91,6 +91,7 @@ footer {
 }
 
 .long_shot {
+    position: absolute;
     width: 202px;
     height: 650px;
     left: 100px;
@@ -98,7 +99,6 @@ footer {
     margin-bottom: 10px;
     margin-left: 1150px;
     margin-right: 1000000px;
-    position: absolute;
 }
 
 .long_shot>img {
