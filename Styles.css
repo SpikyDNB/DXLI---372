@@ -92,13 +92,13 @@ footer {
 
 .long_shot {
     position: absolute;
-    width: 202px;
+    width: 200px;
     height: 650px;
     left: 400px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 1150px;
-    margin-right: 1000000px;
+    margin-right: 100000px;
 }
 
 .long_shot>img {
