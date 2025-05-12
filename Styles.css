@@ -4,120 +4,261 @@
     padding: 0;
     font-family: sans-serif;
 }
-
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url(Pictures/woodbg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url(Pictures/plank.webp);
 }
 
 header {
     display: flex;
     align-items: center;
     background-image: url(Pictures/plank.webp);
-    padding: 10px 20px;
-    border-bottom: 2px solid #000;
+    padding: 35px;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 30000px;
 }
 
-.home-icon {
-    margin-right: 20px;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #ffff;
-}
-
-main {
-    flex: 1;
+.wall {
+    background-image: url(Pictures/woodbg.jpg);
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    position: relative;
+    flex-wrap: wrap;
+    margin: 35px;
 }
 
-.box {
-    border: 1px solid #ccc;
-    width: 100px;
-
+.shelf {
+    background-image: url(Pictures/plank.webp);
+    padding: 15px;
+    margin: 20px;
 }
 
-.book {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    background-image: url(Pictures/openbook.png);
+h1 {
+    color: white;
+    font-size: 35px;
+    top: 0;
+    margin: 35px;
+    font-family: Pristina, sans-serif;
+}
+
+.hardcover {
+    background-image: url(Pictures/plank.webp);
+}
+
+.pages {
+    background-image: url(Pictures/woodbg.jpg);
+    display: grid;
+    padding: 35px;
+    margin: 20px;
 }
 
 .page {
-    width: 25%;
-    height: 530px;
-    border: 1px solid #ccc;
-    padding: 5px;
+    background-image: url(Pictures/Parchment.jpg);
+    padding: 35px;
+    width: 75%;
+    height: 75%;
     text-align: left;
 }
 
-
-.pagination {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+p {
+    color: black;
+    font-size: 35px;
+    top: 0;
+    margin: 35px;
+    font-family: Pristina, sans-serif;
 }
 
 footer {
     background-image: url(Pictures/plank.webp);
-    color: #ffff;
     text-align: center;
-    padding: 15px;
-    border-top: 2px solid #000;
+    padding: 35px;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 30000px;
 }
 
-.container {
-    display: grid;
-    column-gap: 5px;
-    grid-template-columns: 100px 200px 120px;
+:root {
+    --spine-pyramid: linear-gradient(315deg,
+            transparent 75%,
+            rgba(255, 255, 255, 0.1) 0),
+        linear-gradient(45deg,
+            transparent 75%,
+            rgba(255, 255, 255, 0.1) 0),
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.2) 166px,
+            transparent 0),
+        linear-gradient(45deg,
+            rgba(0, 0, 0, 0.1) 75%,
+            transparent 0);
+    background-size: 20px 20px;
+    --spine-stairs: repeating-linear-gradient(63deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 3px,
+            transparent 0),
+        linear-gradient(127deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 90px,
+            transparent 55%,
+            transparent 0),
+        linear-gradient(transparent 51%,
+            rgba(0, 0, 0, 0.1) 170px);
+    background-size: 70px 120px;
+    --spine-argyle: repeating-linear-gradient(120deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px,
+            transparent 60px),
+        repeating-linear-gradient(60deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px,
+            transparent 60px),
+        linear-gradient(60deg,
+            rgba(0, 0, 0, 0.1) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(0, 0, 0, 0.1) 75%,
+            rgba(0, 0, 0, 0.1)),
+        linear-gradient(120deg,
+            rgba(0, 0, 0, 0.1) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(0, 0, 0, 0.1) 75%,
+            rgba(0, 0, 0, 0.1));
+    background-size: 70px 120px;
+    --spine-tartan: repeating-linear-gradient(transparent,
+            transparent 50px,
+            rgba(0, 0, 0, 0.4) 50px,
+            rgba(0, 0, 0, 0.4) 53px,
+            transparent 53px,
+            transparent 63px,
+            rgba(0, 0, 0, 0.4) 63px,
+            rgba(0, 0, 0, 0.4) 66px,
+            transparent 66px,
+            transparent 116px,
+            rgba(0, 0, 0, 0.5) 116px,
+            rgba(0, 0, 0, 0.5) 166px,
+            rgba(255, 255, 255, 0.2) 166px,
+            rgba(255, 255, 255, 0.2) 169px,
+            rgba(0, 0, 0, 0.5) 169px,
+            rgba(0, 0, 0, 0.5) 179px,
+            rgba(255, 255, 255, 0.2) 179px,
+            rgba(255, 255, 255, 0.2) 182px,
+            rgba(0, 0, 0, 0.5) 182px,
+            rgba(0, 0, 0, 0.5) 232px,
+            transparent 232px),
+        repeating-linear-gradient(270deg,
+            transparent,
+            transparent 50px,
+            rgba(0, 0, 0, 0.4) 50px,
+            rgba(0, 0, 0, 0.4) 53px,
+            transparent 53px,
+            transparent 63px,
+            rgba(0, 0, 0, 0.4) 63px,
+            rgba(0, 0, 0, 0.4) 66px,
+            transparent 66px,
+            transparent 116px,
+            rgba(0, 0, 0, 0.5) 116px,
+            rgba(0, 0, 0, 0.5) 166px,
+            rgba(255, 255, 255, 0.2) 166px,
+            rgba(255, 255, 255, 0.2) 169px,
+            rgba(0, 0, 0, 0.5) 169px,
+            rgba(0, 0, 0, 0.5) 179px,
+            rgba(255, 255, 255, 0.2) 179px,
+            rgba(255, 255, 255, 0.2) 182px,
+            rgba(0, 0, 0, 0.5) 182px,
+            rgba(0, 0, 0, 0.5) 232px,
+            transparent 232px),
+        repeating-linear-gradient(125deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.2) 2px,
+            rgba(0, 0, 0, 0.2) 3px,
+            transparent 3px,
+            transparent 5px,
+            rgba(0, 0, 0, 0.2) 5px);
+}
+
+.category {
+    background-image: url(Pictures/woodbg2.png);
     padding: 5px;
-    align-content: space-evenly;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.container_skills {
-    display: grid;
-    column-gap: 5px;
-    row-gap: 10px;
-    grid-template-columns: 75px 150px auto;
+.book {
+    width: 50px;
+    height: 280px;
+    position: relative;
+    margin-left: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(0) rotateY(0);
+    transition: transform 1s;
 }
 
-.container_st {
-    display: grid;
-    column-gap: 5px;
-    row-gap: 10px;
-    grid-template-columns: 200px 20px 200px;
-}
-
-.container>div {
-    padding: 5px;
-    text-align: center;
-}
-
-.long_shot {
-    width: 202px;
-    height: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 1150px;
-    margin-right: 1000000px;
+.side {
     position: absolute;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transform-origin: center left;
 }
 
-.long_shot>img {
-    width: 275px;
-    height: 500px;
+.spine {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    /* Patterns from: https://projects.verou.me/css3patterns/ */
+    background-image: var(--tartan);
+    transform: rotateY(0deg) translateZ(0px);
+}
 
+.spine-title {
+    margin: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 12px;
+    color: gold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.spine-author {
+    position: absolute;
+    color: goldenrod;
+    bottom: 0px;
+    left: 20%;
+    /* no idea why 20% centers it */
+}
+
+.top {
+    width: 50px;
+    height: 190px;
+    top: -2px;
+    /* hmm, why -2 and not 0? */
+    background-image: linear-gradient(90deg, white 90%, gray 10%);
+    background-size: 5px 5px;
+    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+}
+
+.cover {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-color: grey;
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+}
+
+.book:hover {
+    z-index: 1;
+    transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px) translateX(-30px);
 }
