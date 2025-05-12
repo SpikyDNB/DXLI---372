@@ -10,6 +10,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url(Pictures/woodbg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 header {
@@ -40,25 +43,31 @@ main {
     position: relative;
 }
 
-.pages {
+.box {
+    border: 1px solid #ccc;
+    width: 100px;
+
+}
+
+.book {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 10px;
+    background-image: url(Pictures/openbook.png);
 }
 
 .page {
-    width: 48%;
+    width: 25%;
     height: 530px;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
-    background-image: url(Pictures/Parchment.jpg);
 }
 
 
 .pagination {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
