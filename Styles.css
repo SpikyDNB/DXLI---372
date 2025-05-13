@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Pristina, sans-serif;
+    font-size: 20px;
 }
 
 body {
@@ -47,6 +48,7 @@ h2 {
     margin: auto;
     font-family: Pristina, sans-serif;
     text-decoration: underline;
+    writing-mode: sideways-lr;
 }
 
 .hardcover {
@@ -61,6 +63,7 @@ h2 {
 
 .page {
     background-image: url(Pictures/Parchment.jpg);
+    display: flex;
     max-width: 910px;
     margin: auto;
     text-align: left;
@@ -68,7 +71,7 @@ h2 {
 }
 
 .page>p {
-    padding: 35px;
+    padding: 30px;
     color: black;
     font-size: 20px;
     margin: auto;
@@ -276,4 +279,18 @@ footer {
 .book:hover {
     z-index: 1;
     transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px) translateX(-30px);
+}
+
+.container {
+    display: grid;
+    padding: 35px;
+    column-gap: 5px;
+    row-gap: 10px;
+    grid-template-columns: 150px 150px 150px;
+    align-content: space-evenly;
+}
+
+.container>div {
+    padding: 5px;
+    text-align: center;
 }
