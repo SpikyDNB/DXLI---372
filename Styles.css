@@ -64,7 +64,7 @@ h2 {
 .page {
     background-image: url(Pictures/Parchment.jpg);
     display: flex;
-    max-width: 910px;
+    max-width: 75%;
     margin: auto;
     text-align: left;
 
