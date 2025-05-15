@@ -1,296 +1,66 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Pristina, sans-serif;
-    font-size: 20px;
 }
 
 body {
-    background-image: url(Pictures/Parchment.jpg);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Style the header */
 header {
-    display: flex;
-    align-items: center;
-    background-image: url(Pictures/plank.webp);
-    padding: 35px;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    width: 30000px;
-}
-
-.wall {
-    background-image: url(Pictures/plank.webp);
-    display: flex;
-    flex-wrap: wrap;
-    margin: 35px;
-}
-
-.shelf {
-    background-image: url(Pictures/plank.webp);
-    margin: 50px;
-}
-
-h1 {
-    color: white;
-    font-size: 35px;
-    top: 0;
-    margin: 35px;
-    font-family: Pristina, sans-serif;
-}
-
-h2 {
-    padding: 35px;
-    color: black;
-    font-size: auto;
-    margin: auto;
-    font-family: Pristina, sans-serif;
-    text-decoration: underline;
-    writing-mode: sideways-lr;
-}
-
-.hardcover {
-    background-image: url(Pictures/plank.webp);
-    padding: 75px;
-}
-
-.page-divider {
-    padding: 35px;
-    margin: auto;
-}
-
-.page {
-    background-image: url(Pictures/Parchment.jpg);
-    display: flex;
-    max-width: 75%;
-    margin: auto;
-    text-align: left;
-
-}
-
-.page>p {
+    background-color: #666;
     padding: 30px;
-    color: black;
-    font-size: 20px;
-    margin: auto;
-    font-family: Pristina, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    color: white;
 }
 
-.page>img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 300px;
+    /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
 }
 
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px;
+    /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
 footer {
-    background-image: url(Pictures/plank.webp);
+    background-color: #777;
+    padding: 10px;
     text-align: center;
-    padding: 35px;
-    position: fixed;
-    z-index: 3;
-    bottom: 0;
-    width: 30000px;
+    color: white;
 }
 
-:root {
-    --spine-pyramid: linear-gradient(315deg,
-            transparent 75%,
-            rgba(255, 255, 255, 0.1) 0),
-        linear-gradient(45deg,
-            transparent 75%,
-            rgba(255, 255, 255, 0.1) 0),
-        linear-gradient(135deg,
-            rgba(255, 255, 255, 0.2) 166px,
-            transparent 0),
-        linear-gradient(45deg,
-            rgba(0, 0, 0, 0.1) 75%,
-            transparent 0);
-    background-size: 20px 20px;
-    --spine-stairs: repeating-linear-gradient(63deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 3px,
-            transparent 0),
-        linear-gradient(127deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.1) 90px,
-            transparent 55%,
-            transparent 0),
-        linear-gradient(transparent 51%,
-            rgba(0, 0, 0, 0.1) 170px);
-    background-size: 70px 120px;
-    --spine-argyle: repeating-linear-gradient(120deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 1px,
-            transparent 60px),
-        repeating-linear-gradient(60deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 1px,
-            transparent 60px),
-        linear-gradient(60deg,
-            rgba(0, 0, 0, 0.1) 25%,
-            transparent 25%,
-            transparent 75%,
-            rgba(0, 0, 0, 0.1) 75%,
-            rgba(0, 0, 0, 0.1)),
-        linear-gradient(120deg,
-            rgba(0, 0, 0, 0.1) 25%,
-            transparent 25%,
-            transparent 75%,
-            rgba(0, 0, 0, 0.1) 75%,
-            rgba(0, 0, 0, 0.1));
-    background-size: 70px 120px;
-    --spine-tartan: repeating-linear-gradient(transparent,
-            transparent 50px,
-            rgba(0, 0, 0, 0.4) 50px,
-            rgba(0, 0, 0, 0.4) 53px,
-            transparent 53px,
-            transparent 63px,
-            rgba(0, 0, 0, 0.4) 63px,
-            rgba(0, 0, 0, 0.4) 66px,
-            transparent 66px,
-            transparent 116px,
-            rgba(0, 0, 0, 0.5) 116px,
-            rgba(0, 0, 0, 0.5) 166px,
-            rgba(255, 255, 255, 0.2) 166px,
-            rgba(255, 255, 255, 0.2) 169px,
-            rgba(0, 0, 0, 0.5) 169px,
-            rgba(0, 0, 0, 0.5) 179px,
-            rgba(255, 255, 255, 0.2) 179px,
-            rgba(255, 255, 255, 0.2) 182px,
-            rgba(0, 0, 0, 0.5) 182px,
-            rgba(0, 0, 0, 0.5) 232px,
-            transparent 232px),
-        repeating-linear-gradient(270deg,
-            transparent,
-            transparent 50px,
-            rgba(0, 0, 0, 0.4) 50px,
-            rgba(0, 0, 0, 0.4) 53px,
-            transparent 53px,
-            transparent 63px,
-            rgba(0, 0, 0, 0.4) 63px,
-            rgba(0, 0, 0, 0.4) 66px,
-            transparent 66px,
-            transparent 116px,
-            rgba(0, 0, 0, 0.5) 116px,
-            rgba(0, 0, 0, 0.5) 166px,
-            rgba(255, 255, 255, 0.2) 166px,
-            rgba(255, 255, 255, 0.2) 169px,
-            rgba(0, 0, 0, 0.5) 169px,
-            rgba(0, 0, 0, 0.5) 179px,
-            rgba(255, 255, 255, 0.2) 179px,
-            rgba(255, 255, 255, 0.2) 182px,
-            rgba(0, 0, 0, 0.5) 182px,
-            rgba(0, 0, 0, 0.5) 232px,
-            transparent 232px),
-        repeating-linear-gradient(125deg,
-            transparent,
-            transparent 2px,
-            rgba(0, 0, 0, 0.2) 2px,
-            rgba(0, 0, 0, 0.2) 3px,
-            transparent 3px,
-            transparent 5px,
-            rgba(0, 0, 0, 0.2) 5px);
-}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
 
-.category {
-    background-image: url(Pictures/woodbg2.png);
-    padding: 5px;
-    margin-top: 32px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.book {
-    width: 50px;
-    height: 280px;
-    position: relative;
-    margin-left: 1px;
-    transform-style: preserve-3d;
-    transform: translateZ(0) rotateY(0);
-    transition: transform 1s;
-}
-
-.side {
-    position: absolute;
-    border: 2px solid black;
-    border-radius: 3px;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    transform-origin: center left;
-}
-
-.spine {
-    position: relative;
-    width: 50px;
-    height: 280px;
-    /* Patterns from: https://projects.verou.me/css3patterns/ */
-    background-image: var(--tartan);
-    transform: rotateY(0deg) translateZ(0px);
-}
-
-.spine-title {
-    margin: 2px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    font-size: 12px;
-    color: gold;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
-
-.spine-author {
-    position: absolute;
-    color: goldenrod;
-    bottom: 10px;
-    left: 20%;
-    /* no idea why 20% centers it */
-}
-
-.top {
-    width: 50px;
-    height: 190px;
-    top: -2px;
-    /* hmm, why -2 and not 0? */
-    background-image: linear-gradient(90deg, white 90%, gray 10%);
-    background-size: 5px 5px;
-    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
-}
-
-.cover {
-    width: 190px;
-    height: 280px;
-    top: 0px;
-    background-color: grey;
-    background-size: contain;
-    background-repeat: round;
-    left: 50px;
-    transform: rotateY(90deg) translateZ(0);
-    transition: transform 1s;
-}
-
-.book:hover {
-    z-index: 1;
-    transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px) translateX(-30px);
-}
-
-.container {
-    display: grid;
-    padding: 35px;
-    column-gap: 5px;
-    row-gap: 10px;
-    grid-template-columns: 150px 150px 150px;
-    align-content: space-evenly;
-}
-
-.container>div {
-    padding: 5px;
-    text-align: center;
+    nav,
+    article {
+        width: 100%;
+        height: auto;
+    }
 }
