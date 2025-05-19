@@ -103,7 +103,7 @@
 
 .category {
     background-image: url(/Pictures/woodbg2.png);
-    padding: 5px;
+    padding: 10px;
     margin-top: 32px;
     display: flex;
     flex-wrap: wrap;
