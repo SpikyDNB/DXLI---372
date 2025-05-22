@@ -41,17 +41,8 @@ let generateCartItems = () => {
       `;
       })
       .join(""));
-  } else {
-    ShoppingCart.innerHTML = ``;
-    label.innerHTML = `
-    <h2>Cart is Empty</h2>
-    <a href="index.html">
-      <button class="HomeBtn">Back to home</button>
-    </a>
-    `;
-  }
-};
-
+  };
+}
 generateCartItems();
 
 let increment = (id) => {
@@ -129,3 +120,4 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
+
