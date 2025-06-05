@@ -1,5 +1,22 @@
+.wall {
+    padding: 20px;
+    height: auto;
+    background-image: url(/Pictures/plank.webp);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.shelf {
+    background-image: url(/Pictures/woodbg2.png);
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+
 .category {
     background-image: url(/Pictures/woodbg2.png);
+    height: 295px;
     padding: 10px;
     margin-top: 32px;
     display: flex;
